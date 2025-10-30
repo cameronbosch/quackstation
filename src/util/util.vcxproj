@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\dep\msvc\vsprops\Configurations.props" />
+  <ItemGroup>
+    <ClInclude Include="compress_helpers.h" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="imgui_animated.h" />
+    <ClInclude Include="audio_stream.h" />
+    <ClInclude Include="cd_image.h" />
+    <ClInclude Include="cd_image_hasher.h" />
+    <ClInclude Include="cue_parser.h" />
+    <ClInclude Include="d3d11_device.h" />
+    <ClInclude Include="d3d11_pipeline.h" />
+    <ClInclude Include="d3d11_stream_buffer.h" />
+    <ClInclude Include="d3d11_texture.h" />
+    <ClInclude Include="d3d12_builders.h" />
+    <ClInclude Include="d3d12_descriptor_heap_manager.h" />
+    <ClInclude Include="d3d12_device.h" />
+    <ClInclude Include="d3d12_pipeline.h" />
+    <ClInclude Include="d3d12_stream_buffer.h" />
+    <ClInclude Include="d3d12_texture.h" />
+    <ClInclude Include="d3d_common.h" />
+    <ClInclude Include="dinput_source.h" />
+    <ClInclude Include="gpu_device.h" />
+    <ClInclude Include="gpu_framebuffer_manager.h" />
+    <ClInclude Include="gpu_shader_cache.h" />
+    <ClInclude Include="gpu_texture.h" />
+    <ClInclude Include="host.h" />
+    <ClInclude Include="http_downloader.h" />
+    <ClInclude Include="http_downloader_curl.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="http_downloader_winhttp.h" />
+    <ClInclude Include="imgui_fullscreen.h" />
+    <ClInclude Include="imgui_manager.h" />
+    <ClInclude Include="ini_settings_interface.h" />
+    <ClInclude Include="input_manager.h" />
+    <ClInclude Include="input_source.h" />
+    <ClInclude Include="iso_reader.h" />
+    <ClInclude Include="media_capture.h" />
+    <ClInclude Include="metal_device.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="metal_stream_buffer.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_context.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_context_agl.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_context_egl.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_context_egl_wayland.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_context_egl_x11.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_context_wgl.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_device.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_loader.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_pipeline.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_stream_buffer.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="opengl_texture.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="page_fault_handler.h" />
+    <ClInclude Include="cd_subchannel_replacement.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="platform_misc.h" />
+    <ClInclude Include="postprocessing.h" />
+    <ClInclude Include="postprocessing_shader.h" />
+    <ClInclude Include="postprocessing_shader_fx.h" />
+    <ClInclude Include="postprocessing_shader_glsl.h" />
+    <ClInclude Include="sdl_input_source.h" />
+    <ClInclude Include="shadergen.h" />
+    <ClInclude Include="shiftjis.h" />
+    <ClInclude Include="sockets.h" />
+    <ClInclude Include="state_wrapper.h" />
+    <ClInclude Include="vulkan_builders.h" />
+    <ClInclude Include="vulkan_device.h" />
+    <ClInclude Include="vulkan_entry_points.h" />
+    <ClInclude Include="vulkan_loader.h" />
+    <ClInclude Include="vulkan_pipeline.h" />
+    <ClInclude Include="vulkan_stream_buffer.h" />
+    <ClInclude Include="vulkan_swap_chain.h" />
+    <ClInclude Include="vulkan_texture.h" />
+    <ClInclude Include="wav_writer.h" />
+    <ClInclude Include="win32_raw_input_source.h" />
+    <ClInclude Include="window_info.h" />
+    <ClInclude Include="xinput_source.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audio_stream.cpp" />
+    <ClCompile Include="cd_image.cpp" />
+    <ClCompile Include="cd_image_bin.cpp" />
+    <ClCompile Include="cd_image_chd.cpp" />
+    <ClCompile Include="cd_image_cue.cpp" />
+    <ClCompile Include="cd_image_device.cpp" />
+    <ClCompile Include="cd_image_ecm.cpp" />
+    <ClCompile Include="cd_image_hasher.cpp" />
+    <ClCompile Include="cd_image_m3u.cpp" />
+    <ClCompile Include="cd_image_mds.cpp" />
+    <ClCompile Include="cd_image_memory.cpp" />
+    <ClCompile Include="cd_image_pbp.cpp" />
+    <ClCompile Include="compress_helpers.cpp" />
+    <ClCompile Include="cubeb_audio_stream.cpp" />
+    <ClCompile Include="cue_parser.cpp" />
+    <ClCompile Include="cd_image_ppf.cpp" />
+    <ClCompile Include="d3d11_device.cpp" />
+    <ClCompile Include="d3d11_pipeline.cpp" />
+    <ClCompile Include="d3d11_stream_buffer.cpp" />
+    <ClCompile Include="d3d11_texture.cpp" />
+    <ClCompile Include="d3d12_builders.cpp" />
+    <ClCompile Include="d3d12_descriptor_heap_manager.cpp" />
+    <ClCompile Include="d3d12_device.cpp" />
+    <ClCompile Include="d3d12_pipeline.cpp" />
+    <ClCompile Include="d3d12_stream_buffer.cpp" />
+    <ClCompile Include="d3d12_texture.cpp" />
+    <ClCompile Include="d3d_common.cpp" />
+    <ClCompile Include="dinput_source.cpp" />
+    <ClCompile Include="gpu_device.cpp" />
+    <ClCompile Include="gpu_shader_cache.cpp" />
+    <ClCompile Include="gpu_texture.cpp" />
+    <ClCompile Include="host.cpp" />
+    <ClCompile Include="http_downloader.cpp" />
+    <ClCompile Include="http_downloader_curl.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="http_downloader_winhttp.cpp" />
+    <ClCompile Include="image.cpp" />
+    <ClCompile Include="imgui_fullscreen.cpp" />
+    <ClCompile Include="imgui_manager.cpp" />
+    <ClCompile Include="ini_settings_interface.cpp" />
+    <ClCompile Include="input_manager.cpp" />
+    <ClCompile Include="input_source.cpp" />
+    <ClCompile Include="iso_reader.cpp" />
+    <ClCompile Include="cd_subchannel_replacement.cpp" />
+    <ClCompile Include="media_capture.cpp" />
+    <ClCompile Include="opengl_context.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_context_egl.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_context_egl_wayland.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_context_egl_x11.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_context_wgl.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_device.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_pipeline.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_stream_buffer.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="opengl_texture.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="platform_misc_win32.cpp" />
+    <ClCompile Include="postprocessing.cpp" />
+    <ClCompile Include="postprocessing_shader.cpp" />
+    <ClCompile Include="postprocessing_shader_fx.cpp" />
+    <ClCompile Include="postprocessing_shader_glsl.cpp" />
+    <ClCompile Include="sdl_audio_stream.cpp" />
+    <ClCompile Include="sdl_input_source.cpp" />
+    <ClCompile Include="shadergen.cpp" />
+    <ClCompile Include="shiftjis.cpp" />
+    <ClCompile Include="page_fault_handler.cpp" />
+    <ClCompile Include="sockets.cpp" />
+    <ClCompile Include="state_wrapper.cpp" />
+    <ClCompile Include="vulkan_builders.cpp" />
+    <ClCompile Include="vulkan_device.cpp" />
+    <ClCompile Include="vulkan_loader.cpp" />
+    <ClCompile Include="vulkan_pipeline.cpp" />
+    <ClCompile Include="vulkan_stream_buffer.cpp" />
+    <ClCompile Include="vulkan_swap_chain.cpp" />
+    <ClCompile Include="vulkan_texture.cpp" />
+    <ClCompile Include="wav_writer.cpp" />
+    <ClCompile Include="win32_raw_input_source.cpp" />
+    <ClCompile Include="window_info.cpp" />
+    <ClCompile Include="xinput_source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\dep\cubeb\cubeb.vcxproj">
+      <Project>{72f9423c-91ee-4487-aac6-555ed6f61aa1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dep\d3d12ma\d3d12ma.vcxproj">
+      <Project>{f351c4d8-594a-4850-b77b-3c1249812cce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dep\freesurround\freesurround.vcxproj">
+      <Project>{1b0366e5-6f82-47b4-9fdd-d699c86aa077}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dep\imgui\imgui.vcxproj">
+      <Project>{bb08260f-6fbc-46af-8924-090ee71360c6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dep\libchdr\libchdr.vcxproj">
+      <Project>{425d6c99-d1c8-43c2-b8ac-4d7b1d941017}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dep\reshadefx\reshadefx.vcxproj">
+      <Project>{27b8d4bb-4f01-4432-bc14-9bf6ca458eee}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dep\glad\glad.vcxproj" Condition="'$(Platform)'!='ARM64'">
+      <Project>{43540154-9e1e-409c-834f-b84be5621388}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\common\common.vcxproj">
+      <Project>{ee054e08-3799-4a59-a422-18259c105ffd}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="metal_device.mm">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </ClCompile>
+    <None Include="metal_shaders.metal">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <ClCompile Include="metal_stream_buffer.mm">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </ClCompile>
+    <None Include="opengl_context_agl.mm">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{57F6206D-F264-4B07-BAF8-11B9BBE1F455}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="..\..\dep\msvc\vsprops\StaticLibrary.props" />
+  <Import Project="util.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)dep\reshadefx\include</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="..\..\dep\msvc\vsprops\Targets.props" />
+</Project>

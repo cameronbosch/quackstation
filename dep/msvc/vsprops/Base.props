@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Dependencies -->
+  <PropertyGroup Label="UserMacros">
+    <DepsRootDir Condition="'$(Platform)'=='x64'">$(SolutionDir)dep\msvc\deps-x64\</DepsRootDir>
+    <DepsRootDir Condition="'$(Platform)'=='ARM64'">$(SolutionDir)dep\msvc\deps-arm64\</DepsRootDir>
+    <DepsBinDir>$(DepsRootDir)bin\</DepsBinDir>
+    <DepsLibDir>$(DepsRootDir)lib\</DepsLibDir>
+    <DepsIncludeDir>$(DepsRootDir)include\</DepsIncludeDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(Configuration.Contains(Debug))">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="!$(Configuration.Contains(Debug))">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains(LTCG))">
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_HAS_EXCEPTIONS=0;_CRT_INTERNAL_NONSTDC_NAMES;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DepsIncludeDir)</AdditionalIncludeDirectories>
+      <AdditionalOptions Condition="!$(Configuration.Contains(Clang))">/Zc:__cplusplus /Zo /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="$(Configuration.Contains(Clang)) And '$(Platform)'=='x64'"> -msse4.1 %(AdditionalOptions)</AdditionalOptions>
+      <!-- Force ThinLTO for Release builds, MSVC doesn't seem to do it otherwise. -->
+      <AdditionalOptions Condition="$(Configuration.Contains(Clang)) And $(Configuration.Contains(ReleaseLTCG))"> -flto=thin %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings Condition="!$(Configuration.Contains(Clang))">4324;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(DepsLibDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="$(Configuration.Contains(Debug))">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(Configuration.Contains(DebugFast))">
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>_DEBUGFAST;_ITERATOR_DEBUG_LEVEL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="!$(Configuration.Contains(Debug))">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(Configuration.Contains(LTCG))">
+    <ClCompile>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

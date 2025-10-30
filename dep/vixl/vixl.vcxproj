@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\msvc\vsprops\Configurations.props" />
+  <ItemGroup>
+    <ClInclude Include="include\vixl\aarch32\assembler-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch32\constants-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch32\disasm-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch32\instructions-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch32\location-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch32\macro-assembler-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch32\operands-aarch32.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\abi-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\assembler-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\constants-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\cpu-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\cpu-features-auditor-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\decoder-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\decoder-constants-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\decoder-visitor-map-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\disasm-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\instructions-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\macro-assembler-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\operands-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\registers-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\simulator-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\aarch64\simulator-constants-aarch64.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\vixl\assembler-base-vixl.h" />
+    <ClInclude Include="include\vixl\code-buffer-vixl.h" />
+    <ClInclude Include="include\vixl\code-generation-scopes-vixl.h" />
+    <ClInclude Include="include\vixl\compiler-intrinsics-vixl.h" />
+    <ClInclude Include="include\vixl\cpu-features.h" />
+    <ClInclude Include="include\vixl\globals-vixl.h" />
+    <ClInclude Include="include\vixl\invalset-vixl.h" />
+    <ClInclude Include="include\vixl\macro-assembler-interface.h" />
+    <ClInclude Include="include\vixl\platform-vixl.h" />
+    <ClInclude Include="include\vixl\pool-manager-impl.h" />
+    <ClInclude Include="include\vixl\pool-manager.h" />
+    <ClInclude Include="include\vixl\utils-vixl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\aarch32\assembler-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch32\constants-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch32\disasm-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch32\instructions-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch32\location-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch32\macro-assembler-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch32\operands-aarch32.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\assembler-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\assembler-sve-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\cpu-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\cpu-features-auditor-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\decoder-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\disasm-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\instructions-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\logic-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\macro-assembler-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\macro-assembler-sve-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\operands-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\pointer-auth-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\aarch64\registers-aarch64.cc">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\code-buffer-vixl.cc" />
+    <ClCompile Include="src\compiler-intrinsics-vixl.cc" />
+    <ClCompile Include="src\cpu-features.cc" />
+    <ClCompile Include="src\utils-vixl.cc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8906836E-F06E-46E8-B11A-74E5E8C7B8FB}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="..\msvc\vsprops\StaticLibrary.props" />
+  <PropertyGroup Condition="'$(Platform)'=='ARM64'">
+    <VixlPreprocessorDefinitions>VIXL_INCLUDE_TARGET_AARCH64;VIXL_CODE_BUFFER_MALLOC</VixlPreprocessorDefinitions>
+    <VixlIncludeDirectories>$(ProjectDir)include\vixl\aarch64</VixlIncludeDirectories>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>$(VixlPreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\vixl;$(VixlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions Condition="$(Configuration.Contains(Clang))"> -Wno-deprecated-enum-enum-conversion %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="..\msvc\vsprops\Targets.props" />
+</Project>
