@@ -15,7 +15,7 @@ I am open and welcome to any contributions that can help me keep the FOSS PSX em
 ## Why change the name?
 Unfortunately, I cannot use the DuckStation name for this project, as that is very likely a trademark held by stenzek, and it is very unlikely that he will allow me or others to use it for this project. As such, I have changed the name of the project from DuckStation to QuackStation.
 
-In addition, because the logo for DuckStation is also likely a trademark held by stenzek, I am urgently seeking a new logo, even a temporary one, to replace the current one also used by DuckStation. (Please note that any of these submitted logos must be released under a CC-BY-SA compatible license for me to accept it into the project.)
+In addition, because the logo for DuckStation is also likely a trademark held by stenzek, I have replaced the logo from DuckStation from one by [Luke Miller](https://mastodon.gamedev.place/@upmultimedia). Thank you to Luke for this logo!
 
 ## So... Why the current name "QuackStation"?
 Well, "quack" is the sound ducks make, and a "quack" is also used to denorte a person who pretends in some way to have skills, knowledge, or other qualifications they do not possess. That's why the name was chosen.
@@ -259,7 +259,9 @@ QuackStation is licensed under the GNU GPLv3 or later, and all contributions to 
 However, as the license that the final release of DuckStation that was released under was _only_ licensed under the GNU GPLv3 (without the "or later" clause), it is (at least for now) for all intents and purposes under the GNU GPLv3 only.
 The terms of the license are contained in the LICENSE file.
 
+Icon by [Luke Miller](https://mastodon.gamedev.place/@upmultimedia). Thank you to Luke for this logo!
+
 ## Disclaimers
 - This project was forked from DuckStation, which was (c) September 2019 - September 2024 stenzek and other contributors.
-  - "DuckStation" and its logo are trademarks of stenzek, likely held by stenzek. This project is no longer affiliated with DuckStation and is a hard fork of the final FOSS release.
+  - "DuckStation" and its logo are trademarks of DuckStation, likely held by stenzek. This project is no longer affiliated with DuckStation and is a hard fork of the final FOSS release.
 - "PlayStation" and "PSX" are registered trademarks of Sony Interactive Entertainment Europe Limited. This project is not affiliated in any way with Sony Interactive Entertainment.
