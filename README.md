@@ -1,7 +1,7 @@
-# QuackStation
+## QuackStation
 This project started as an archived copy of DuckStation, a PSX emulator with a Qt front-end. It is now a separate project, aka, a hard fork of DuckStation.
 
-# Why fork Duck Station?
+## Why fork Duck Station?
 Prior to a license change that moved it from being a free and open source PSX emulator, DuckStation wss basically the only modern PSX emulator available for Linux and on Flathub. However, as of commit `25bc8a64803df7e702db66e0f11d7b7d0fdc99f2` on 1 September 2024, the main developer of DuckStation, stenzek, updated their license, changing it from the GPLv3 license to the PolyForm Strict License 1.0.0, which is a source available but proprietary (non-free) software license. It was later switched to the CC-BY-NC-ND license, which is also not a free and open source license, and is also not meant for licensing software under. This, plus stenzek making other erratic moves such as threatening to break Arch Linux users from maintaining an AUR package, made me worry about the future of PSX emulation on Linux. The final nail in the coffin was that in late October 2025, the FlatHub package was marked as deprecated and is no longer being updated. As it is not under a FOSS license anymore and stenzek has been behaving rather rudely and erractically to the FOSS and especially the Linux community, I thought somebody would step up to fork the final FOSS version of DuckStation. Unfortunately, until 30 October 2025, nobody stepped up to properly fork the final GPLv3 version of DuckStation, leaving FlatHub without _any_ PSX emulator at all.
 
 For those who were wondering, the change that officially moved DuckStation from the GPLv3 to the first non FOSS license was shown here: <https://github.com/stenzek/duckstation/commit/9ca6b5430fb358b39f21ce0b2fc0268de954dd23>
@@ -12,23 +12,13 @@ Because of all of the above and also because the version of Qt (the front-end fo
 
 I am open and welcome to any contributions that can help me keep the FOSS PSX emulation dream alive!
 
-# Why change the name?
+## Why change the name?
 Unfortunately, I cannot use the DuckStation name for this project, as that is very likely a trademark held by stenzek, and it is very unlikely that he will allow me or others to use it for this project. As such, I have changed the name of the project from DuckStation to QuackStation.
 
 In addition, because the logo for DuckStation is also likely a trademark held by stenzek, I am urgently seeking a new logo, even a temporary one, to replace the current one also used by DuckStation. (Please note that any of these submitted logos must be released under a CC-BY-SA compatible license for me to accept it into the project.)
 
 ## So... Why the current name "QuackStation"?
 Well, "quack" is the sound ducks make, and a "quack" is also used to denorte a person who pretends in some way to have skills, knowledge, or other qualifications they do not possess. That's why the name was chosen.
-
-# License
-QuackStation is licensed under the GNU GPLv3 or later, and all contributions to the code base going forward must be compatible with this license.
-However, as the license that the final release of DuckStation that was released under was _only_ licensed under the GNU GPLv3 (without the "or later" clause), it is (at least for now) for all intents and purposes under the GNU GPLv3 only.
-The terms of the license are contained in the LICENSE file.
-
-## Disclaimers
-- This project was forked from DuckStation, which was (c) September 2019 - September 2024 stenzek and other contributors.
-  - "DuckStation" and its logo are trademarks of stenzek, likely held by stenzek. This project is no longer affiliated with DuckStation and is a hard fork of the final FOSS release.
-- "PlayStation" and "PSX" are registered trademarks of Sony Interactive Entertainment Europe Limited. This project is not affiliated in any way with Sony Interactive Entertainment.
 
 [Features](#features) | [Downloading and Running](#downloading-and-running) | [Building](#building) | [Disclaimers](#disclaimers)
 
@@ -264,8 +254,12 @@ Hotkeys:
  - **Tab:** Temporarily Disable Speed Limiter
  - **Space:** Pause/Resume Emulation
 
+# License
+QuackStation is licensed under the GNU GPLv3 or later, and all contributions to the code base going forward must be compatible with this license.
+However, as the license that the final release of DuckStation that was released under was _only_ licensed under the GNU GPLv3 (without the "or later" clause), it is (at least for now) for all intents and purposes under the GNU GPLv3 only.
+The terms of the license are contained in the LICENSE file.
+
 ## Disclaimers
-
-Icon by (icon needed)
-
-"PlayStation" and "PSX" are registered trademarks of Sony Interactive Entertainment Europe Limited. This project is not affiliated in any way with Sony Interactive Entertainment.
+- This project was forked from DuckStation, which was (c) September 2019 - September 2024 stenzek and other contributors.
+  - "DuckStation" and its logo are trademarks of stenzek, likely held by stenzek. This project is no longer affiliated with DuckStation and is a hard fork of the final FOSS release.
+- "PlayStation" and "PSX" are registered trademarks of Sony Interactive Entertainment Europe Limited. This project is not affiliated in any way with Sony Interactive Entertainment.
