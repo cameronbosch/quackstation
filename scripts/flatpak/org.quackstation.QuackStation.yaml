@@ -1,17 +1,17 @@
-app-id: "org.duckstation.DuckStation"
+app-id: "org.quackstation.QuackStation"
 runtime: "org.kde.Platform"
-runtime-version: "6.7"
+runtime-version: "6.10"
 sdk: "org.kde.Sdk"
 sdk-extensions:
   - "org.freedesktop.Sdk.Extension.llvm17"
 add-extensions:
   "org.freedesktop.Platform.ffmpeg-full":
     directory: "lib/ffmpeg"
-    version: "23.08"
+    version: "25.08"
     add-ld-path: "."
     autodownload: true
 
-command: "duckstation-qt"
+command: "quackstation-qt"
 
 finish-args:
   - "--device=all"
@@ -37,7 +37,7 @@ modules:
   - "modules/27-lunasvg.yaml"
 
   # Main module.
-  - name: duckstation
+  - name: quackstation
     buildsystem: cmake-ninja
     builddir: true
     no-make-install: true
@@ -77,16 +77,16 @@ modules:
       # Manually copy desktop file/metadata, it's not done as part of the regular build.
       - >-
         install -Dm644
-        "${FLATPAK_BUILDER_BUILDDIR}/scripts/org.duckstation.DuckStation.png"
-        "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/org.duckstation.DuckStation.png"
+        "${FLATPAK_BUILDER_BUILDDIR}/scripts/org.quackstation.DuckStation.png"
+        "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/org.quackstation.QuackStation.png"
       - >-
         install -Dm644
-        "${FLATPAK_BUILDER_BUILDDIR}/scripts/org.duckstation.DuckStation.desktop"
-        "${FLATPAK_DEST}/share/applications/org.duckstation.DuckStation.desktop"
+        "${FLATPAK_BUILDER_BUILDDIR}/scripts/org.quackstation.QuackStation.desktop"
+        "${FLATPAK_DEST}/share/applications/org.quackstation.QuackStation.desktop"
       - >-
         install -Dm644
-        "${FLATPAK_BUILDER_BUILDDIR}/scripts/flatpak/org.duckstation.DuckStation.metainfo.xml"
-        "${FLATPAK_DEST}/share/metainfo/org.duckstation.DuckStation.metainfo.xml"
+        "${FLATPAK_BUILDER_BUILDDIR}/scripts/flatpak/org.quackstation.QuackStation.metainfo.xml"
+        "${FLATPAK_DEST}/share/metainfo/org.quackstation.QuackStation.metainfo.xml"
 
       # Ensure ffmpeg-full mount point exists.
       - "mkdir -p \"${FLATPAK_DEST}/lib/ffmpeg\""

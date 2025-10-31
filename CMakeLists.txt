@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
-project(duckstation C CXX)
+project(quackstation C CXX)
 
 # Policy settings.
 cmake_policy(SET CMP0069 NEW)
 set(CMAKE_POLICY_DEFAULT_CMP0069 NEW)
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
-  message(FATAL_ERROR "DuckStation does not support in-tree builds. Please make a build directory that is not the source"
+  message(FATAL_ERROR "quackStation does not support in-tree builds. Please make a build directory that is not the source"
                       "directory and generate your CMake project there using either `cmake -B build_directory` or by "
                       "running cmake from the build directory.")
 endif()
@@ -22,7 +22,7 @@ message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")
 
 # Pull in modules.
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMakeModules/")
-include(DuckStationUtils)
+include(QuackStationUtils)
 
 # Detect system attributes.
 detect_operating_system()
@@ -32,7 +32,7 @@ detect_page_size()
 detect_cache_line_size()
 
 # Build options. Depends on system attributes.
-include(DuckStationBuildOptions)
+include(QuackStationBuildOptions)
 
 # Enable PIC on Linux, otherwise the builds do not support ASLR.
 if(LINUX OR BSD)
@@ -109,9 +109,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Recursively include the source tree.
-include(DuckStationDependencies)
+include(QuackStationDependencies)
 add_subdirectory(dep)
 add_subdirectory(src)
 
 # Output build summary.
-include(DuckStationBuildSummary)
+include(QuackStationBuildSummary)
