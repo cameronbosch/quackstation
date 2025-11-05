@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "src\core\core.vcxpr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simpleini", "dep\simpleini\simpleini.vcxproj", "{3773F4CC-614E-4028-8595-22E08CA649E3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "duckstation-qt", "src\duckstation-qt\duckstation-qt.vcxproj", "{28F14272-0EC4-41BB-849F-182ADB81AF70}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quackstation-qt", "src\quackstation-qt\quackstation-qt.vcxproj", "{28F14272-0EC4-41BB-849F-182ADB81AF70}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cubeb", "dep\cubeb\cubeb.vcxproj", "{72F9423C-91EE-4487-AAC6-555ED6F61AA1}"
 EndProject
@@ -42,7 +42,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vixl", "dep\vixl\vixl.vcxpr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rcheevos", "dep\rcheevos\rcheevos.vcxproj", "{4BA0A6D4-3AE1-42B2-9347-096FD023FF64}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "duckstation-regtest", "src\duckstation-regtest\duckstation-regtest.vcxproj", "{3029310E-4211-4C87-801A-72E130A648EF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quackstation-regtest", "src\quackstation-regtest\quackstation-regtest.vcxproj", "{3029310E-4211-4C87-801A-72E130A648EF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rainterface", "dep\rainterface\rainterface.vcxproj", "{E4357877-D459-45C7-B8F6-DCBB587BB528}"
 EndProject
