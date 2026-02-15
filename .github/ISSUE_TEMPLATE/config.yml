@@ -2,5 +2,5 @@ blank_issues_enabled: false
 
 contact_links:
   - name: Game compatibility list
-    url: To be remade
+    url: https://docs.google.com/spreadsheets/d/1H66MxViRjjE5f8hOl5RQmF5woS1murio2dsLn14kEqo/edit
     about: Please refer to the game compatibility list before opening an issue.

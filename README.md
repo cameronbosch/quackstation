@@ -2,11 +2,9 @@
 This project started as an archived copy of DuckStation, a PSX emulator with a Qt front-end. It is now a separate project, aka, a hard fork of DuckStation.
 
 ## Why fork Duck Station?
-Prior to a license change that moved it from being a free and open source PSX emulator, DuckStation wss basically the only modern PSX emulator available for Linux and on Flathub. However, as of commit `25bc8a64803df7e702db66e0f11d7b7d0fdc99f2` on 1 September 2024, the main developer of DuckStation, stenzek, updated their license, changing it from the GPLv3 license to the PolyForm Strict License 1.0.0, which is a source available but proprietary (non-free) software license. It was later switched to the CC-BY-NC-ND license, which is also not a free and open source license, and is also not meant for licensing software under. This, plus stenzek making other erratic moves such as threatening to break Arch Linux users from maintaining an AUR package, made me worry about the future of PSX emulation on Linux. The final nail in the coffin was that in late October 2025, the FlatHub package was marked as deprecated and is no longer being updated. As it is not under a FOSS license anymore and stenzek has been behaving rather rudely and erractically to the FOSS and especially the Linux community, I thought somebody would step up to fork the final FOSS version of DuckStation. Unfortunately, until 30 October 2025, nobody stepped up to properly fork the final GPLv3 version of DuckStation, leaving Flathub without _any_ PSX emulator at all.
+Prior to a license change that moved it from being a free and open source PSX emulator, DuckStation wss basically the only modern PSX emulator available for Linux and on Flathub. However, as of commit `25bc8a64803df7e702db66e0f11d7b7d0fdc99f2` on 1 September 2024, the main developer of DuckStation, stenzek, updated their license, changing it from the GPLv3 license to the PolyForm Strict License 1.0.0, which is a source available but proprietary (non-free) software license. It was later switched to the CC-BY-NC-ND license, which is also not a free and open source license, and is also not meant for licensing software under. This, plus stenzek making other erratic moves such as threatening to break Arch Linux users from maintaining an AUR package, made me worry about the future of PSX emulation on Linux. The final nail in the coffin was that in late October 2025, the FlatHub package was marked as deprecated and is no longer being updated. As it is not under a FOSS license anymore and stenzek has been behaving rather rudely and erractically to the FOSS and especially the Linux community, I thought somebody would step up to fork the final FOSS version of DuckStation. Unfortunately, until 30 October 2025, nobody stepped up to properly fork the final GPLv3 version of DuckStation, leaving FlatHub without _any_ PSX emulator at all.
 
 For those who were wondering, the change that officially moved DuckStation from the GPLv3 to the first non FOSS license was shown here: <https://github.com/stenzek/duckstation/commit/9ca6b5430fb358b39f21ce0b2fc0268de954dd23>
-
-As of 29 July 2025, stenzek has continued to make erratic changes. For example: <https://youtu.be/2OMxCC6BFxE>
 
 The final GPLv3 version of DuckStation had been archived at https://codeberg.org/vimuser/duckstation by Leah Rowe. A massive thank you to her for doing this so I don't have to worry about "GPL violations" for accidently looking at post FOSS DuckStation.
 
@@ -22,17 +20,13 @@ In addition, because the logo for DuckStation is also likely a trademark held by
 ## So... Why the current name "QuackStation"?
 Well, "quack" is the sound ducks make, and a "quack" is also used to denorte a person who pretends in some way to have skills, knowledge, or other qualifications they do not possess. That's why the name was chosen.
 
-I know it sounds like a "typical protest fork name", but it is what it is.
-
 [Features](#features) | [Downloading and Running](#downloading-and-running) | [Building](#building) | [Disclaimers](#disclaimers)
 
 **Latest Builds for Windows 10/11 (x64/ARM64), Linux (AppImage/Flatpak), and macOS (11.0+ Universal):** https://github.com/cameronbosch/quackstation/releases/tag/latest
 
 **Game Compatibility List:** _This needs to be redone._
 
-**Matrix Room:** _Currently in the progress of being made._
-
-**We currently do not have a Discord server and likely never will because of [Discord becoming a privacy and security risk starting in March 2026](https://www.gamingonlinux.com/2026/02/discord-is-about-to-require-age-verification-for-everyone/) (this change was announced by them on 9 February 2026).**
+**Discord Server:** Currently does not exist.
 
 QuackStation is an simulator/emulator of the Sony PlayStation(TM) console, focusing on playability, speed, and long-term maintainability. The goal is to be as accurate as possible while maintaining performance suitable for low-end devices. "Hack" options are discouraged, the default configuration should support all playable games with only some of the enhancements having compatibility issues.
 
@@ -113,7 +107,7 @@ The only supported versions of DuckStation for Linux are the AppImage and Flatpa
 
 We plan to offer an official release on [Flathub](https://flathub.org/) again once the project gets back on track. This release will synchronized with the latest rolling/stable release on GitHub. This will become the primary and recommended way to use QuackStation once we get back on track.
 
-You **should not** install QuackStation from unofficial repositories such as the AUR, they are **known to be broken**.
+You **should not** install DuckStation from unofficial repositories such as the AUR, they are **known to be broken**.
 
 #### AppImage
 
@@ -128,8 +122,8 @@ The AppImages require a distribution equivalent to Ubuntu 22.04 or newer to run.
  - Go to https://github.com/cameronbosch/quackstation/releases/tag/latest, and download `quackstation-x64.flatpak`.
  - Run `flatpak install ./quackstation-x64.flatpak`.
 
-or, if you have Flathub set up:
- - Run `flatpak install flathub org.quackstation.QuackStation`. Please note that as of 30 October 2025, this will not work for now.
+or, if you have FlatHub set up:
+ - Run `flatpak install org.quackstation.QuackStation`. Please note that as of 30 October 2025, this will not work for now.
 
 Use `flatpak run org.quackstation.QuackStation` to start, or select `QuackStation` in the launcher of your desktop environment. Follow the Setup Wizard to get started.
  
@@ -161,7 +155,7 @@ If you have an external controller, you will need to map the buttons and sticks 
 
 A number of PAL region games use LibCrypt protection, requiring additional CD subchannel information to run properly. libcrypt not functioning usually manifests as hanging or crashing, but can sometimes affect gameplay too, depending on how the game implemented it.
 
-For these games, make sure that the CD image and its corresponding SBI (.sbi) file have the same name and are placed in the same directory. QuackStation will automatically load the SBI file when it is found next to the CD image.
+For these games, make sure that the CD image and its corresponding SBI (.sbi) file have the same name and are placed in the same directory. DuckStation will automatically load the SBI file when it is found next to the CD image.
 
 For example, if your disc image was named `Spyro3.cue`, you would place the SBI file in the same directory, and name it `Spyro3.sbi`.
 
@@ -176,7 +170,7 @@ Requirements:
 
 1. Clone the respository: `git clone https://github.com/cameronbosch/quackstation.git`.
 2. Download the dependencies pack from https://github.com/cameronbosch/quackstation-ext-qt-minimal/releases/download/latest/deps-x64.7z, and extract it to `dep\msvc`.
-3. Open the Visual Studio solution `quackstation.sln` in the root, or "Open Folder" for cmake build.
+3. Open the Visual Studio solution `duckstation.sln` in the root, or "Open Folder" for cmake build.
 4. Build solution.
 5. Binaries are located in `bin/x64`.
 6. Run `quackstation-qt-x64-Release.exe` or whichever config you used.
@@ -220,22 +214,13 @@ Requirements:
 The "User Directory" is where you should place your BIOS images, where settings are saved to, and memory cards/save states are saved by default.
 An optional [SDL game controller database file](#sdl-game-controller-database) can be also placed here.
 
-For now, this is located in the following places depending on the platform you're using:
+This is located in the following places depending on the platform you're using:
 
 - Windows: My Documents\DuckStation
 - Linux: `$XDG_DATA_HOME/duckstation`, or `~/.local/share/duckstation`.
 - macOS: `~/Library/Application Support/DuckStation`.
 
 So, if you were using Linux, you would place your BIOS images in `~/.local/share/duckstation/bios`. This directory will be created upon running QuackStation
-for the first time.
-
-We do plan to eventually transition to the following format:
-
-- Windows: My Documents\QuackStation
-- Linux: `$XDG_DATA_HOME/quackstation`, or `~/.local/share/quackstation`.
-- macOS: `~/Library/Application Support/QuackStation`.
-
-So, if you were using Linux, you would place your BIOS images in `~/.local/share/quackstation/bios`. This directory will be created upon running QuackStation
 for the first time.
 
 If you wish to use a "portable" build, where the user directory is the same as where the executable is located, create an empty file named `portable.txt`
