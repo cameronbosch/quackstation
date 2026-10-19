@@ -1,3 +1,6 @@
+# Important Notice - 19 October 2026
+I need serious help with these dependencies that were broken because of the unorthodox development practices of the original developer. I REALLY do not want to use AI, even for this, but I do need the community's help for this! If you want this project to stay AI free, now is the time for help! I cannot make new releases unless this is done!
+
 ## QuackStation
 This project started as an archived copy of DuckStation, a PSX emulator with a Qt front-end. It is now a separate project, aka, a hard fork of DuckStation.
 
